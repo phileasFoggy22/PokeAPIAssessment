@@ -29,10 +29,10 @@ public class HomeController
 		return mv;
 	}
 	@RequestMapping("findPokemonName")
-	public ModelAndView getPokemonName(@RequestParam String pokemonName)
+	public ModelAndView getPokemonName(@RequestParam String pokemonName, @RequestParam int memberNumber)
 	{
-		//SearchHistory search = new SearchHistory(0, pokemonName, 0);
-		//repo.save(search);
+		SearchHistory search = new SearchHistory(pokemonName,memberNumber);
+		repo.save(search);
 		ModelAndView mv = new ModelAndView("pokemon");
 		System.out.println("pokemon:"+pokemonurl + "pokemon/"+pokemonName); 
 		
@@ -47,10 +47,10 @@ public class HomeController
 		return mv;
 	}
 	@RequestMapping("findPokemonNumber")
-	public ModelAndView getPokemonName(@RequestParam int pokemonNumber)
+	public ModelAndView getPokemonName(@RequestParam int pokemonNumber, @RequestParam int memberNumber)
 	{
-		//SearchHistory search = new SearchHistory(0, pokemonName, 0);
-		//repo.save(search);
+		SearchHistory search = new SearchHistory(String.valueOf(pokemonNumber),memberNumber);
+		repo.save(search);
 		ModelAndView mv = new ModelAndView("pokemon");
 		System.out.println("pokemon:"+pokemonurl + "pokemon/"+pokemonNumber); 
 		

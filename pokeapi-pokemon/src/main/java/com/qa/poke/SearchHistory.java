@@ -6,17 +6,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 public class SearchHistory {
-	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Id 
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name = "native", strategy = "native")
 	@Column(name = "searchID", updatable = false, nullable = false)
 	private int searchID;
 	private String searchTerm;
 	private int memberNumber;
 	
-	public SearchHistory(int searchID, String searchTerm, int memberNumber) {
+	public SearchHistory(String searchTerm, int memberNumber) {
 		super();
-		this.searchID = searchID;
 		this.searchTerm = searchTerm;
 		this.memberNumber = memberNumber;
 	}

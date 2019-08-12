@@ -11,12 +11,14 @@
 <h1>Get Pokemon by Name</h1>
 <form action="findPokemonName">
 Name: <input type="text" name="pokemonName"><br>
+<input type="hidden" name="memberNumber" value=1>
 <input type="submit">
 </form>
 <br>
 <h1>Get Pokemon by Number</h1>
 <form action="findPokemonNumber">
 Number: <input type="text" name="pokemonNumber"><br>
+<input type="hidden" name="memberNumber" value=1>
 <input type="submit">
 </form>
 <br>
