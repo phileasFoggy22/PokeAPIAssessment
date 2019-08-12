@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\Admin\Documents\New folder\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3782448261.index
+\pokeapi-pokemon\src\main\java
+C:\Users\Admin\Documents\New folder\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3588627521.index
+\pokeapi-users\src\main\java
+C:\Users\Admin\Documents\New folder\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\899297586.index
+\pokeapi-users\src\main\java

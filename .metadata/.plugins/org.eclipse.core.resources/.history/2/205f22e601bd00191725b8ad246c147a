@@ -1,0 +1,8 @@
+package com.qa.poke;
+
+import org.springframework.data.repository.JpaRepository;
+
+public interface MemberRepo extends JpaRepository<Member, Integer>
+{
+
+}

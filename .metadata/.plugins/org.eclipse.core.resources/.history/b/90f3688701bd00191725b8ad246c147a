@@ -1,0 +1,8 @@
+package com.qa.poke;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface MemberRepo extends CrudRepository<Member, Integer>
+{
+
+}
