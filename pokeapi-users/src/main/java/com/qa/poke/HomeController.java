@@ -15,7 +15,7 @@ public class HomeController
 	MemberRepo repo;
 	
 	@RequestMapping("home")
-	public ModelAndView home(User member) {
+	public ModelAndView home(Member member) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("member", member);
 		mv.setViewName("Home");

@@ -1,0 +1,7 @@
+package com.qa.poke;
+
+public class SearchHistory {
+	private int searchID;
+	private String searchTerm;
+
+}

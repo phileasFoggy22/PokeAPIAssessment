@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Add User</h1>
+<form action="addUser">
+Number: <input type="text" name="memberNumber"><br>
+Name: <input type="text" name="memberName"><br>
+<input type="submit">
+</form>
+<br>
+<h1>Get User</h1>
+<form action="getUser">
+Number: <input type="text" name="memberNumber"><br>
+<input type="submit">
+</form>
+<br>
+<h1>Get All User</h1>
+<form action="getUsers">
+<input type="submit">
+</form>
+
+</body>
+</html>

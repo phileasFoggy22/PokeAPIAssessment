@@ -1,0 +1,50 @@
+package com.qa.poke;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController 
+{
+	@Autowired
+	SearchHistoryRepo repo;
+	
+	@RequestMapping("home")
+	public ModelAndView home(SearchHistory member) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("member", member);
+		mv.setViewName("Home");
+		return mv;
+	}
+	@RequestMapping("findPokemonName")
+	public ModelAndView getUser(@RequestParam String pokemonName)
+	{
+		SearchHistory search = new SearchHistory(0, pokemonName, 0);
+		repo.save(search);
+		ModelAndView mv = new ModelAndView("Pokemon");
+		ModelAndView mv404 = new ModelAndView("Pokemon404");
+		Pokemon poke1 = repo.findById(pokemonName).orElse(null);
+		if(poke1 == null) {
+			return mv404;
+		}
+		mv.addObject(mem1);
+		return mv;
+	}
+	@RequestMapping("findPokemonID")
+	public ModelAndView getUsers()
+	{
+		ModelAndView mv = new ModelAndView("Members");
+		ModelAndView mv404 = new ModelAndView("Members404");
+		Member mem1 = repo.findById(memberNumber).orElse(null);
+		if(mem1 == null) {
+			return mv404;
+		}
+		mv.addObject(mem1);
+		return mv;
+	}
+}
